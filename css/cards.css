@@ -1,0 +1,29 @@
+/* GRID DOS CARDS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+}
+
+/* CARD INDIVIDUAL */
+.card {
+    background: var(--cor-branco);
+    border-radius: 12px;
+    padding: var(--sp-3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    border-left: 6px solid var(--cor-primaria);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* TÍTULO DO CARD */
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--sp-2);
+    color: var(--cor-preto);
+}

@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos | ONG Sorriso Solidário</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/cards.css">
+
+
+
 </head>
 <body>
     <header>
         <h1>Nossos Projetos</h1>
+
+        <button class="menu-toggle">☰</button>
+
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -17,29 +27,35 @@
         </nav>
     </header>
     <main>
-        <article>
-            <h2>Consultório Solidário Móvel</h2>
-            <p>Oferecer avaliação, limpeza, restaurações e extrações simples gratuitas para comunidades carentes, pessoas em situação de rua, ou pacientes com doenças crônicas (como câncer). E foco na Dignidade: Promover o tratamento completo para reabilitar o sorriso (próteses) de quem perdeu muitos dentes.</p>
+    <h2>Nossos Projetos</h2>
+    <section class="cards-container">
+
+        <article class="card">
+            <h3>Consultório Solidário Móvel</h3>
+            <p>Atendimento gratuito em comunidades com foco em saúde bucal.</p>
         </article>
-        <article>
-            <h2>"Escovação de Ouro" nas Escolas</h2>
-            <p>Realizar palestras lúdicas e escovação supervisionada com crianças em escolas públicas.
-Distribuir kits de higiene bucal (escova, pasta de dente, fio dental) e ensinar a técnica correta de escovação.
-Foco na Prevenção: Aplicar flúor e fazer triagens para identificar casos urgentes.</p>
+
+        <article class="card">
+            <h3>Escovação de Ouro nas Escolas</h3>
+            <p>Palestras e kits de higiene para promoção da saúde bucal.</p>
         </article>
-        <section>
-            <h2>Como Ajudar</h2>
-            <p>Você pode contribuir de várias formas:</p>
-            <ul>
-                <li>Doações financeiras;</li>
-                <li>Participando como voluntário;</li>
-                <li>Divulgando nossos projetos.</li>
-            </ul>
-            <p><a href="cadastro.html">Clique aqui para se cadastrar como voluntário!</a></p>
-        </section>
-    </main>
+
+    </section>
+</main>
+
     <footer>
         <p>&copy; 2025 ONG Sorriso Solidário | Todos os direitos reservados.</p>
     </footer>
+
+<script>
+    const toggleMenu = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav ul");
+
+    toggleMenu.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
+
 </body>
 </html>
