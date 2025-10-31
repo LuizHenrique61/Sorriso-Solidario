@@ -1,96 +1,104 @@
-/* NOVO ESTILO DO HEADER E MENU */
+/* HEADER */
 header {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
-  padding: var(--sp-2) var(--sp-4);
-  border-bottom: 4px solid var(--cor-primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 4px solid var(--cor-primaria);
 }
 
 header img {
-  width: 140px;
-}
-
-header h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  color: var(--cor-preto);
-  margin: 0;
+    width: 120px;
 }
 
 /* MENU */
-nav {
-  justify-self: end;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav button:hover {
+    color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* MAIN */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--cor-primaria);
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ✅ Correção do Header e do Menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+header img {
+    width: 140px;
 }
 
 nav ul {
-  display: flex;
-  gap: var(--sp-3);
-  list-style: none;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--cor-primaria);
-  transition: 0.3s;
+    text-decoration: none;
+    color: #DAA900;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-nav a:hover,
-nav a:focus {
-  color: var(--cor-secundaria);
-  transform: translateY(-3px);
+nav a:hover {
+    color: #a47f00;
+    transform: translateY(-3px);
 }
 
-
-/* CONTAINER CENTRALIZADO */
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: var(--sp-4);
-}
-
-/* Títulos */
-h2 {
-  margin-top: var(--sp-4);
-  font-size: 1.7rem;
-  color: var(--cor-preto);
-}
-
-
-footer {
-  background: var(--cor-primaria);
-  color: var(--cor-preto);
-  text-align: center;
-  padding: var(--sp-2);
-  font-weight: bold;
-}
-
-/* Botão do Menu Mobile */
+/* Menu Mobile */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 32px;
     cursor: pointer;
-    color: #DAA900;
-}
-
-/* Menu Mobile escondido inicialmente */
-nav ul {
-    display: flex;
-    gap: 20px;
+    color: var(--cor-primaria);
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
     nav ul {
         display: none;
         flex-direction: column;
@@ -101,10 +109,23 @@ nav ul {
         padding: 15px;
         border: 2px solid #DAA900;
         border-radius: 8px;
+        gap: 15px;
     }
 
     nav ul.active {
         display: flex;
     }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    nav {
+        position: relative;
+    }
 }
+
 
