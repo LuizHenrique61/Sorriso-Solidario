@@ -1,0 +1,41 @@
+/* ===== TEMAS DE ACESSIBILIDADE ===== */
+
+/* Tema escuro */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode a {
+  color: #4ea3ff;
+}
+
+/* Alto contraste */
+.contrast-mode {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.contrast-mode a {
+  color: #ff0 !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contrast-mode img {
+  filter: contrast(150%) brightness(120%);
+}
+
+/* Botões de controle de acessibilidade */
+.accessibility-controls button {
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  border: none;
+  background: transparent;
+}
